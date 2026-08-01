@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tailwind scanning */
+@source "../**/*.{js,ts,jsx,tsx}";
+
+/* 🎨 MAROON + GOLD + YELLOW THEME */
+:root {
+  --background: #fff8e7; /* soft gold background */
+  --foreground: #3b0000; /* maroon text */
+
+  --primary: #7b0a0a; /* maroon */
+  --secondary: #d4af37; /* gold */
+  --accent: #ffd700; /* yellow */
+
+  --card: #ffffff;
+  --border: #d4af37;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}

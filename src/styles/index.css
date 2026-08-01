@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Lucernas maroon/gold theme */
+    --background: 0 0% 98%;
+    --foreground: 355 50% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 355 50% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 355 50% 10%;
+    --primary: 355 70% 30%;       /* deep maroon */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 43 90% 50%;      /* gold/amber */
+    --secondary-foreground: 355 70% 15%;
+    --muted: 355 10% 94%;
+    --muted-foreground: 355 15% 45%;
+    --accent: 43 90% 50%;
+    --accent-foreground: 355 70% 15%;
+    --border: 355 15% 88%;
+    --input: 355 15% 88%;
+    --ring: 355 70% 30%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 355 20% 8%;
+    --foreground: 355 5% 96%;
+    --card: 355 20% 11%;
+    --card-foreground: 355 5% 96%;
+    --popover: 355 20% 11%;
+    --popover-foreground: 355 5% 96%;
+    --primary: 355 60% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 43 80% 45%;
+    --secondary-foreground: 355 20% 10%;
+    --muted: 355 15% 18%;
+    --muted-foreground: 355 10% 60%;
+    --accent: 43 80% 45%;
+    --accent-foreground: 355 20% 10%;
+    --border: 355 15% 22%;
+    --input: 355 15% 22%;
+    --ring: 355 60% 50%;
+  }
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Slide-in animation for the drawer */
+@keyframes slide-in-from-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+.animate-in { animation-fill-mode: both; }
+.slide-in-from-right { animation-name: slide-in-from-right; }
+.duration-200 { animation-duration: 200ms; }
